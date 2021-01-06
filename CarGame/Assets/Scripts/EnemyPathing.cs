@@ -13,7 +13,7 @@ public class EnemyPathing : MonoBehaviour
     {
         
         transform.position = waypoints[waypointIndex].transform.position;
-        waypoints = obstacleWaveScript.GetPathPrefab();
+
     }
 
 
