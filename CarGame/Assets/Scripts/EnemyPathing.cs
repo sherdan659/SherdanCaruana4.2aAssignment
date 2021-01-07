@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class EnemyPathing : MonoBehaviour
 {
-    [SerializeField] List<Transform> waypoints;
     [SerializeField] float moveSpeed = 2f;
-    [SerializeField] ObstacleWaveScript obstacleWaveScript;
     int waypointIndex = 0;
 
+    [SerializeField] List<Transform> path;
+
+    // Start is called before the first frame update
     void Start()
     {
-        
-        transform.position = waypoints[waypointIndex].transform.position;
-
+        transform.position = path[waypointIndex].transform.position;
     }
 
-
+    // Update is called once per frame
     void Update()
     {
         EnemyMove();
@@ -24,30 +23,23 @@ public class EnemyPathing : MonoBehaviour
 
     void EnemyMove()
     {
-        if (waypointIndex <= waypoints.Count - 1)
+        if (waypointIndex <= path.Count - 1)
         {
-
-            var targetPosition = waypoints[waypointIndex].transform.position;
+            var targetPosition = path[waypointIndex].transform.position;
 
             targetPosition.z = 0f;
 
             var movementThisFrame = moveSpeed * Time.deltaTime;
-
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
-
 
             if (transform.position == targetPosition)
             {
                 waypointIndex++;
             }
         }
-
         else
         {
             Destroy(gameObject);
         }
     }
-
-
-
 }

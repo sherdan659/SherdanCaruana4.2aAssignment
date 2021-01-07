@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] float enemyLaserSpeed = 2f;
-    [SerializeField] float enemyLaserPrefab = 1f;
+    [SerializeField] GameObject enemyLaserPrefab;
 
 
     // Start is called before the first frame update
@@ -37,11 +37,10 @@ public class Enemy : MonoBehaviour
 
     private void EnemyFire()
     {
+
         GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
         //enemy laser shoots downwards, hence -enemyLaserSpeed
         enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);
     }
-
-
 
 }
