@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    //a list of WaveConfigs
+    //A used list of WaveConfigs.
     [SerializeField] List<WaveConfig> waveConfigs;
 
     //we always start  from Wave 0
@@ -49,6 +49,7 @@ public class EnemySpawner : MonoBehaviour
 
             newenemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
 
+            //This will start EnemyPathing allowing the waypoints to be used from the already created Waveconfig.
             newenemy.GetComponent<EnemyPathing>().startwave();
 
 
