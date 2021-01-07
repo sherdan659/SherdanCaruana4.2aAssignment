@@ -20,8 +20,7 @@ public class EnemySpawner : MonoBehaviour
         var currentWave = waveConfigs[startingWave];
 
         //start the coroutine that spawns all enemies in our currentWave
-        StartCoroutine(SpawnAllEnemiesInWave(currentWave));
-        StartCoroutine(SpawnAllWaves());
+
         do
         {
             yield return StartCoroutine(SpawnAllWaves());
@@ -68,9 +67,6 @@ public class EnemySpawner : MonoBehaviour
             yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
         }
     }
-
-
-
 
 
 }

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 50
   MovementSpeed: 5
-  padding: 0
+  padding: 1
 --- !u!60 &-3185487693576857619
 PolygonCollider2D:
   m_ObjectHideFlags: 0
