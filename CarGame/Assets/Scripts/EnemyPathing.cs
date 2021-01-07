@@ -9,29 +9,22 @@ public class EnemyPathing : MonoBehaviour
     WaveConfig waveConfig;
     List<Transform> wayPoints;
 
-    //This bool will ensure that it doesnt move the enemy unless the startwave method is called 
-    bool startedwave = false;
 
-    // As soon as the waveconfig is set by the enemyspawner this method will run taking the waypoints from waveconfig to move the objects.
 
-    public void startwave()
+    void Start()
     {
-
         wayPoints = waveConfig.GetWaypoints();
         transform.position = wayPoints[waypointIndex].transform.position;
-        startedwave = true;
     }
 
 
     void Update()
     {
-        if (startedwave == true)
-        {
-
-            EnemyMove();
-        }
+        EnemyMove();
+        
         
     }
+    
 
     void EnemyMove()
     {

@@ -49,8 +49,7 @@ public class EnemySpawner : MonoBehaviour
 
             newenemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
 
-            //This will start EnemyPathing allowing the waypoints to be used from the already created Waveconfig.
-            newenemy.GetComponent<EnemyPathing>().startwave();
+            
 
 
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
