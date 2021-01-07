@@ -12,7 +12,7 @@ public class WaveConfig : ScriptableObject
     // Start is called before the first frame update
     void Start()
     {
-        waypoints = waveConfig.GetWaypoints();
+
 
     }
 
@@ -22,15 +22,19 @@ public class WaveConfig : ScriptableObject
 
     }
     [SerializeField] GameObject enemyPrefab;
-    //the path on which to go
+
     [SerializeField] GameObject pathPrefab;
-    //number of enemies in the wave
+
+    [SerializeField] float timeBetweenSpawns = 0.5f;
+
     [SerializeField] int numberOfEnemies = 5;
-    //enemy movement speed
+
     [SerializeField] float enemyMoveSpeed = 2f;
 
-    [SerializeField] WaveConfig waveConfig;
-
+    public GameObject GetEnemyPrefab()
+    {
+        return enemyPrefab;
+    }
 
 
     public List<Transform> GetWaypoints()
@@ -45,6 +49,10 @@ public class WaveConfig : ScriptableObject
         }
 
         return waveWayPoints;
+    }
+    public float GetTimeBetweenSpawns()
+    {
+        return timeBetweenSpawns;
     }
 
     public GameObject GetPathPrefab()

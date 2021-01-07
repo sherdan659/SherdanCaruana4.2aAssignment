@@ -21,8 +21,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //continuously plays the move method allowing movment of the player
         Move();
-        //test health
+        //This continuesly prints the players health
         print(playerHealth);
     }
 
@@ -48,8 +49,8 @@ public class Player : MonoBehaviour
     //Health
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //access the Damage Dealer from the "other" object which hit the enemy
-        //and depending on the laser damage reduce health
+        //Accesses damage dealer which will cause health reduction.
+
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         ProcessHit(damageDealer);
     }
@@ -57,8 +58,14 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer damageDealer)
     {
         playerHealth -= damageDealer.GetDamage();
-        //destroy the laser that hits the Player
+        //destroys the bullit when it hits the car
         damageDealer.Hit();
 
+        if (playerHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+
+
 }

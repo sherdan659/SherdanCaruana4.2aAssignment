@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4661048382738691403}
   - component: {fileID: 4799655710425599494}
   - component: {fileID: 3098398486949750331}
+  - component: {fileID: -2960237272730296004}
   m_Layer: 9
   m_Name: Obstacle3
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3097311816225572945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38, y: 7.85, z: 0}
-  m_LocalScale: {x: 0.3530054, y: 0.3530054, z: 0.3530054}
+  m_LocalPosition: {x: 0.5167, y: 7.7133, z: 0}
+  m_LocalScale: {x: 0.23148924, y: 0.23148924, z: 0.23148924}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,7 +102,7 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  enemyLaserSpeed: 2
+  bullietSpeed: 2
   enemyLaserPrefab: {fileID: 0}
 --- !u!114 &-4661048382738691403
 MonoBehaviour:
@@ -153,3 +154,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2960237272730296004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097311816225572945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f491ea9a8a7bc1046a615b1b0a23a8b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1

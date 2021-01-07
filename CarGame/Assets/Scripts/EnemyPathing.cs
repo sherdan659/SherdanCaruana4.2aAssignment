@@ -6,30 +6,39 @@ public class EnemyPathing : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 2f;
     int waypointIndex = 0;
+    WaveConfig waveConfig;
+    List<Transform> wayPoints;
 
-    [SerializeField] List<Transform> path;
+    bool startedwave = false;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void startwave()
     {
-        transform.position = path[waypointIndex].transform.position;
+
+        wayPoints = waveConfig.GetWaypoints();
+        transform.position = wayPoints[waypointIndex].transform.position;
+        startedwave = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        EnemyMove();
+        if (startedwave == true)
+        {
+
+            EnemyMove();
+        }
+        
     }
 
     void EnemyMove()
     {
-        if (waypointIndex <= path.Count - 1)
+        if (waypointIndex <= wayPoints.Count - 1)
         {
-            var targetPosition = path[waypointIndex].transform.position;
-
+            var targetPosition = wayPoints[waypointIndex].transform.position;
+            var movementThisFrame = waveConfig.GetEnemyMoveSpeed() * Time.deltaTime;
             targetPosition.z = 0f;
 
-            var movementThisFrame = moveSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
 
             if (transform.position == targetPosition)
@@ -41,5 +50,12 @@ public class EnemyPathing : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
     }
+    public void SetWaveConfig(WaveConfig waveConfigToSet)
+    {
+        waveConfig = waveConfigToSet;
+    }
+
 }

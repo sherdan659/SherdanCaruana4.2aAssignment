@@ -7,8 +7,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
-    [SerializeField] float enemyLaserSpeed = 2f;
-    [SerializeField] GameObject enemyLaserPrefab;
+    [SerializeField] float bullietSpeed = 2f;
+    [SerializeField] GameObject enemybulletPrefab;
 
 
     // Start is called before the first frame update
@@ -24,12 +24,12 @@ public class Enemy : MonoBehaviour
     }
     private void CountDownAndShoot()
     {
-        //every frame reduces the amount of time that the frame takes to run
+
         shotCounter -= Time.deltaTime;
         if (shotCounter <= 0f)
         {
             EnemyFire();
-            //reset shotCounter after every fire
+
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         }
     
@@ -37,10 +37,14 @@ public class Enemy : MonoBehaviour
 
     private void EnemyFire()
     {
+        //if statment that to check if object will fire bulliet
+        if(enemybulletPrefab != null)
+        {
+            GameObject enemybullet = Instantiate(enemybulletPrefab, transform.position, Quaternion.identity) as GameObject;
+            //-bullietspeed shoots downwards  
+            enemybullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -bullietSpeed);
+        }
 
-        GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
-        //enemy laser shoots downwards, hence -enemyLaserSpeed
-        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);
     }
 
 }

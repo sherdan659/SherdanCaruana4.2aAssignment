@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 397648364514759715}
   - component: {fileID: 8241035333463309889}
   - component: {fileID: -8130391104771376747}
+  - component: {fileID: -5613486009385212241}
   m_Layer: 9
   m_Name: Obstacle2
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608016751592979300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.49, y: 6.12, z: 0}
-  m_LocalScale: {x: 0.13980311, y: 0.14480385, z: 1}
+  m_LocalPosition: {x: -1.3183, y: 6.12, z: 0}
+  m_LocalScale: {x: 0.10255864, y: 0.10622715, z: 0.7335934}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,8 +102,8 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  enemyLaserSpeed: 2
-  enemyLaserPrefab: {fileID: 8446591446613723281, guid: 08d6fc4d2daba5b47b021f33580f6689, type: 3}
+  bullietSpeed: 2
+  enemybulletPrefab: {fileID: 8446591446613723281, guid: 08d6fc4d2daba5b47b021f33580f6689, type: 3}
 --- !u!114 &397648364514759715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +154,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 9.22, y: 4.6899996}
   m_Direction: 0
+--- !u!114 &-5613486009385212241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608016751592979300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f491ea9a8a7bc1046a615b1b0a23a8b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
