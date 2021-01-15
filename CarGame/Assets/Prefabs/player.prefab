@@ -99,6 +99,8 @@ MonoBehaviour:
   playerHealth: 50
   MovementSpeed: 5
   padding: 1
+  playerdamagesound: {fileID: 8300000, guid: 66091767e346093498baed69d1414e7f, type: 3}
+  playerdamagesoundVolume: 0.75
 --- !u!60 &-3185487693576857619
 PolygonCollider2D:
   m_ObjectHideFlags: 0

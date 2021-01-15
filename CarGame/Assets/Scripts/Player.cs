@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     float XMin;
     float XMax;
 
+    [SerializeField] AudioClip playerdamagesound;
+    [SerializeField] [Range(0, 1)] float playerdamagesoundVolume = 0.75f;
 
 
     // Start is called before the first frame update
@@ -24,7 +26,7 @@ public class Player : MonoBehaviour
         //continuously plays the move method allowing movment of the player
         Move();
         //This continuesly prints the players health
-        print(playerHealth);
+        print("Health "+ playerHealth);
     }
 
     private void ViewPortToWorldPoint()
@@ -57,6 +59,9 @@ public class Player : MonoBehaviour
 
     private void ProcessHit(DamageDealer damageDealer)
     {
+        //Plays audio when lost health
+        AudioSource.PlayClipAtPoint(playerdamagesound, Camera.main.transform.position, playerdamagesoundVolume);
+
         playerHealth -= damageDealer.GetDamage();
         //destroys the bullit when it hits the car
         damageDealer.Hit();
