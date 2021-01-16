@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip playerdamagesound;
     [SerializeField] [Range(0, 1)] float playerdamagesoundVolume = 0.75f;
 
+    [SerializeField] GameObject ExplosionParticals;
+    [SerializeField] float explosionDuration;
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,10 +69,18 @@ public class Player : MonoBehaviour
         //destroys the bullit when it hits the car
         damageDealer.Hit();
 
+        //This will call the explosion to happen
+        GameObject CarExplosion = Instantiate(ExplosionParticals, transform.position, Quaternion.identity);
+        //Then removes it
+        Destroy(CarExplosion, 1f);
+
         if (playerHealth <= 0)
         {
             Destroy(gameObject);
+
+
         }
+
     }
 
 

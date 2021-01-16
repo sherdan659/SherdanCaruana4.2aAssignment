@@ -101,6 +101,8 @@ MonoBehaviour:
   padding: 1
   playerdamagesound: {fileID: 8300000, guid: 66091767e346093498baed69d1414e7f, type: 3}
   playerdamagesoundVolume: 0.75
+  ExplosionParticals: {fileID: 5148920503877228883, guid: 54d9fe63ecb374641b69d0e2c0efdbc1, type: 3}
+  explosionDuration: 10
 --- !u!60 &-3185487693576857619
 PolygonCollider2D:
   m_ObjectHideFlags: 0
