@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] float bullietSpeed = 2f;
     [SerializeField] GameObject enemybulletPrefab;
+    [SerializeField] public static int scoreValue = 50;
 
 
     // Start is called before the first frame update
@@ -20,7 +21,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CountDownAndShoot();   
+        CountDownAndShoot();
     }
     private void CountDownAndShoot()
     {
@@ -32,13 +33,13 @@ public class Enemy : MonoBehaviour
 
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         }
-    
+
     }
 
     private void EnemyFire()
     {
         //if statment that to check if object will fire bulliet
-        if(enemybulletPrefab != null)
+        if (enemybulletPrefab != null)
         {
             GameObject enemybullet = Instantiate(enemybulletPrefab, transform.position, Quaternion.identity) as GameObject;
             //-bullietspeed shoots downwards  
@@ -46,5 +47,10 @@ public class Enemy : MonoBehaviour
         }
 
     }
+
+
+
+
+
 
 }

@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
 
-
+            level.LoadGameOver();
         }
 
     }

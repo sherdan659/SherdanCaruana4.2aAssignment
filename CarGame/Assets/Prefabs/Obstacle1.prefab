@@ -104,6 +104,7 @@ MonoBehaviour:
   maxTimeBetweenShots: 4
   bullietSpeed: 2
   enemybulletPrefab: {fileID: 8446591446613723281, guid: 08d6fc4d2daba5b47b021f33580f6689, type: 3}
+  scoreValue: 5
 --- !u!114 &9006737854690838886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,4 +167,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f491ea9a8a7bc1046a615b1b0a23a8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2

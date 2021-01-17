@@ -7,8 +7,16 @@ public class ObjectDestoyer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        FindObjectOfType<GameSession>().AddToScore(Enemy.scoreValue);
         Destroy(collision.gameObject);
+
+
+        
+
+
+
     }
+
+
 
 }
