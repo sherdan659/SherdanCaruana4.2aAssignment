@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     [SerializeField] [Range(0, 1)] float playerdamagesoundVolume = 0.75f;
 
     [SerializeField] GameObject ExplosionParticals;
-    [SerializeField] float explosionDuration;
 
 
     // Start is called before the first frame update
