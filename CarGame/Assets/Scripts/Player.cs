@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float playerHealth = 50;
+    [SerializeField] int playerHealth = 50;
     [SerializeField] float MovementSpeed = 5f;
     [SerializeField] float padding = 0f;
     float XMin;
@@ -28,8 +28,7 @@ public class Player : MonoBehaviour
     {
         //continuously plays the move method allowing movment of the player
         Move();
-        //This continuesly prints the players health
-        print("Health "+ playerHealth);
+
     }
 
     private void ViewPortToWorldPoint()
@@ -80,6 +79,10 @@ public class Player : MonoBehaviour
 
             level.LoadGameOver();
         }
+    }
+    public int Gethealth()
+    {
+        return playerHealth;
 
     }
 

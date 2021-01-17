@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] float bullietSpeed = 2f;
     [SerializeField] GameObject enemybulletPrefab;
-    [SerializeField] public static int scoreValue = 50;
+    [SerializeField] public static int scoreValue = 5;
 
 
     // Start is called before the first frame update
@@ -48,7 +48,11 @@ public class Enemy : MonoBehaviour
 
     }
 
-
+    public void Die()
+    {
+        
+        FindObjectOfType<GameSession>().AddToScore(Enemy.scoreValue);
+    }
 
 
 

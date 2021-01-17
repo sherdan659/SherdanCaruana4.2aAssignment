@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    Text scoreText;
-    GameSession gameSession;
+    public Text scoreText;
+    public GameSession gameSession;
     public void Start()
     {
         scoreText = GetComponent<Text>();

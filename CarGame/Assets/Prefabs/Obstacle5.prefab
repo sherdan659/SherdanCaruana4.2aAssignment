@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1013139879668840177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0471, y: 6.9749, z: 0}
-  m_LocalScale: {x: 0.33727372, y: 0.33727372, z: 1.7989075}
+  m_LocalScale: {x: 0.33727372, y: 0.33727372, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -104,7 +104,6 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   bullietSpeed: 2
   enemybulletPrefab: {fileID: 0}
-  scoreValue: 5
 --- !u!114 &-4568166766174429959
 MonoBehaviour:
   m_ObjectHideFlags: 0

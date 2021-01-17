@@ -104,7 +104,6 @@ MonoBehaviour:
   maxTimeBetweenShots: 4
   bullietSpeed: 2
   enemybulletPrefab: {fileID: 8446591446613723281, guid: 08d6fc4d2daba5b47b021f33580f6689, type: 3}
-  scoreValue: 5
 --- !u!114 &9006737854690838886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +127,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   enemyPrefab: {fileID: 1770366614249852117, guid: 8fb79483f9b8d2948aff6a30cbc3b8c9, type: 3}
-  pathPrefab: {fileID: 3489644715073735198, guid: f0103da9ee68e1d4aa16e82911841cc2, type: 3}
+  pathPrefab: {fileID: 8465493016559939681, guid: f0103da9ee68e1d4aa16e82911841cc2, type: 3}
   timeBetweenSpawns: 4
   numberOfEnemies: 4
   enemyMoveSpeed: 4

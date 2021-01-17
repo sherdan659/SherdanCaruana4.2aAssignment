@@ -15,6 +15,8 @@ public class level : MonoBehaviour
     {
 
         SceneManager.LoadScene("CarGame");
+        FindObjectOfType<GameSession>().ResetGame();
+
     }
 
     public static void LoadGameOver()
@@ -28,5 +30,8 @@ public class level : MonoBehaviour
         Application.Quit();
     }
 
-
+    public static void LoadWinner()
+    {
+        SceneManager.LoadScene("Winner");
+    }
 }
