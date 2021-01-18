@@ -40,7 +40,6 @@ public class GameSession : MonoBehaviour
         if (score >= 100)
         {
             level.LoadWinner();
-
         }
 
     }

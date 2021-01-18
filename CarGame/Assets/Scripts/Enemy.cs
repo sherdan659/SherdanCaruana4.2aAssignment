@@ -48,13 +48,10 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void Die()
+    public void Addpoints()
     {
         
         FindObjectOfType<GameSession>().AddToScore(Enemy.scoreValue);
     }
-
-
-
 
 }

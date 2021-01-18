@@ -21,8 +21,6 @@ public class EnemyPathing : MonoBehaviour
     void Update()
     {
         EnemyMove();
-        
-        
     }
     
 

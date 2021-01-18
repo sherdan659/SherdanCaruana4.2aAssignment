@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 
         var newXposition = Mathf.Clamp(transform.position.x + deltaX, XMin, XMax); //newXposition is the current position + the new position
 
-        this.transform.position = new Vector2(newXposition, transform.position.y); //moving the car. Y remains the same, it doesn't need to move.
+        this.transform.position = new Vector2(newXposition, transform.position.y); //moving the car. Y remains the same, it doesn't need to move up or down.
     }
 
     //Health
