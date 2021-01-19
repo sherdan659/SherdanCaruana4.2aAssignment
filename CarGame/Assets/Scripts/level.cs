@@ -7,7 +7,7 @@ public class level : MonoBehaviour
 {
     public void LoadStartMenu()
     {
-        //loads the first scene in the Project
+        //loads the first scene in the Project can be seen in build settings
         SceneManager.LoadScene(0);
     }
 

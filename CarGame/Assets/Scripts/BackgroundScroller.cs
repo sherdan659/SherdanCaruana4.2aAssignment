@@ -8,7 +8,7 @@ public class BackgroundScroller : MonoBehaviour
     Material myMaterial;
     Vector2 offSet;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         myMaterial = GetComponent<Renderer>().material;
